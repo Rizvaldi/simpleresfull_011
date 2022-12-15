@@ -26,11 +26,23 @@ public class ProductServiceController {
       Product honey = new Product();
       honey.setId("1");
       honey.setName("Honey");
+      honey.setQuantity("3");
+      honey.setPrice("Rp.25.000");
       productRepo.put(honey.getId(), honey);
+      
       Product almond = new Product();
       almond.setId("2");
       almond.setName("Almond");
+      almond.setQuantity("1");
+      almond.setPrice("Rp.35.000");
       productRepo.put(almond.getId(), almond);
+      
+      Product kelapa = new Product();
+      kelapa.setId("3");
+      kelapa.setName("Kelapa");
+      kelapa.setQuantity("1");
+      kelapa.setPrice("Rp.6.000");
+      productRepo.put(kelapa.getId(), kelapa);
    }
    @RequestMapping(value = "/products/{id}", method = RequestMethod.DELETE)
    public ResponseEntity<Object> delete(@PathVariable("id") String id) { 
